@@ -1,14 +1,16 @@
-const express = require("express")
+const express = require("express");
 
-const app = express()
+// Constants
+const PORT = 7777;
+const HOST = '0.0.0.0';
+const app = express();
 
 app.get("/", (req, res) => {
-    res.send("I am a endpoint")
-})
+    res.send("I am a endpoint");
+});
 
-
-app.listen(7777, () => {
-    console.log("listening on port 7777")
+app.listen(PORT, HOST, () => {
+    console.log(`Running on http://${HOST}:${PORT}`);
 })
 
 
